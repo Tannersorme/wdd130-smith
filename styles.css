@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cb3231;
+}
+
+header {
+    background: #fad201;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+.explanation {
+    margin-left: 20px;
+}
+
+.layout {
+    display: flex;
+    margin: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 120px); 
+    grid-gap: 10px;
+}
+
+.fruit {
+    width: 120px;
+    height: 120px;
+    background: #00bb2d;
+    border: 2px solid #1c4e8e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.fruit:hover {
+    border-color: green;
+}
+
+.info {
+    margin-left: 40px;
+    width: 300px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    position: relative;
+}
+
+/* Hide all fruit panels by default */
+.panel {
+    display: none;
+}
+
+/* If no panel is selected, show the default one */
+#default {
+    display: block;
+}
+
+/* Use CSS :target to show the selected fruit info */
+.panel:target {
+    display: block;
+}
+
+/* When a fruit is selected, hide default panel */
+:target ~ #default {
+    display: none;
+}
