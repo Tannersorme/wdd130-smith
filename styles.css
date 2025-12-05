@@ -166,4 +166,298 @@ nav a {
 :target ~ #default {
     display: none;
 }
+/* -------------------------
+   Fruit Picker — styles.css
+   Complete stylesheet for other-rankings.html
+   ------------------------- */
+
+/* ---------- Root / variables ---------- */
+:root{
+  --primary: #CB3231;   /* red */
+  --secondary: #FAD201; /* yellow */
+  --accent-1: #00BB2D;  /* green */
+  --accent-2: #1C4E8E;  /* blue */
+  --muted: #f6f6f6;
+  --text: #111;
+  --max-width: 1100px;
+  --radius: 10px;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--text);
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  background: var(--secondary);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 14px 18px;
+  border-bottom: 4px solid var(--accent-2);
+}
+
+.header-left {
+  font-family: "Merriweather", serif;
+  font-weight:700;
+  color: var(--accent-2);
+  font-size: 20px;
+}
+
+.header-right {
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+#logo img {
+  display:block;
+  border-radius:8px;
+  border: 2px solid rgba(0,0,0,0.06);
+}
+
+/* nav */
+.site-nav a {
+  text-decoration:none;
+  color: #0b2340;
+  margin-left:10px;
+  font-weight:600;
+}
+.site-nav a[aria-current="page"] {
+  text-decoration:underline;
+}
+
+/* ---------- Page container ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 22px auto;
+  padding: 0 18px;
+}
+
+/* intro/title */
+.page-title {
+  margin: 0 0 8px 0;
+  font-family: "Merriweather", serif;
+  color: var(--accent-2);
+  font-size: 28px;
+}
+
+.page-intro {
+  margin: 0 0 18px 0;
+  color: #222;
+}
+
+/* ---------- Layout: left list + panels ---------- */
+.rankings-layout {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+/* Left column - list */
+.rankings-list {
+  width: 280px;
+  background: #fff9e6;
+  border: 2px solid var(--accent-2);
+  padding: 14px;
+  border-radius: var(--radius);
+}
+
+.rankings-list h2 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+  font-family: "Merriweather", serif;
+}
+
+.rankings-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rankings-list li {
+  margin: 10px 0;
+}
+
+/* ranking link with thumbnail */
+.ranking-link {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  padding:6px;
+  border-radius:8px;
+  color: var(--accent-2);
+  transition: background .15s, transform .06s;
+}
+
+.ranking-link:focus,
+.ranking-link:hover {
+  background: var(--secondary);
+  transform: translateY(-1px);
+  color: #061a2b;
+}
+
+/* thumbnail */
+.thumb {
+  width:56px;
+  height:56px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid #ddd;
+  display:block;
+}
+
+/* Controls (buttons) */
+.rank-controls {
+  margin-top: 14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.btn {
+  display:inline-block;
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid var(--accent-2);
+  background: var(--accent-1);
+  color: #071428;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-style:dashed;
+}
+
+/* ---------- Right column - panels ---------- */
+.rankings-panels {
+  flex:1;
+  min-width: 420px;
+  max-width: 760px;
+}
+
+/* Hide all panels by default */
+.rank-panel {
+  display: none;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 18px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+/* default visible when no target */
+.rank-panel#default {
+  display: block;
+}
+
+/* show target panel */
+.rank-panel:target {
+  display: block;
+  /* smooth focus styling for keyboard users */
+  outline: 4px solid rgba(28,78,142,0.09);
+  outline-offset: 4px;
+}
+
+:target ~ #default {
+  display: none;
+}
+
+/* Panel gallery */
+.panel-gallery {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+
+.panel-gallery figure {
+  margin: 0;
+  text-align:center;
+  width: 96px;
+  font-size:12px;
+  color:#333;
+}
+
+.panel-gallery img {
+  width:96px;
+  height:72px;
+  object-fit:cover;
+  border-radius:6px;
+  border:1px solid #ddd;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* ranking list */
+.rank-list {
+  margin: 10px 0 12px 20px;
+  color:#222;
+}
+
+/* explanation */
+.explain {
+  margin-top: 8px;
+  font-style: italic;
+  color:#333;
+}
+
+/* small navigation inside panels */
+.panel-nav {
+  margin-top: 14px;
+  display:flex;
+  gap:12px;
+}
+.small-link {
+  color: var(--accent-2);
+  text-decoration:none;
+  font-weight:600;
+}
+.small-link:hover {
+  text-decoration:underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .rankings-layout {
+    flex-direction: column;
+  }
+  .rankings-list {
+    width:100%;
+  }
+  .rankings-panels {
+    width:100%;
+    min-width: auto;
+  }
+  .panel-gallery {
+    justify-content:flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title { font-size:20px; }
+  .thumb{ width:48px; height:48px; }
+  .panel-gallery img { width:80px; height:60px; }
+  .panel-gallery figure { width:80px; }
+}
+
+/* ---------- Utility / accessibility ---------- */
+a:focus { outline: 3px solid rgba(28,78,142,0.18); outline-offset:2px; }
+button:focus { outline: 3px solid rgba(28,78,142,0.18); outline-offset:2px; }
+
+/* end of stylesheet */
+
 >>>>>>> d23dc0b2d5856e3a2b37d0f56463494b0f5f0e65
