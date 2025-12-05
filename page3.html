@@ -1,3 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Other Rankings — Fruit Picker</title>
+
+  <!-- Optional: Google fonts that match your style guide (Merriweather headings, Playfair for body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">Fruit Picker</div>
+
+  <div class="header-right">
+    <div id="logo">
+      <img src="images/images/logo.jpeg" alt="Site logo" width="72" height="72">
+    </div>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="submit.html">Submit</a>
+      <a href="other-rankings.html" aria-current="page">Other rankings</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page container">
+  <h1 class="page-title">Other people’s rankings</h1>
+
+  <p class="page-intro">
+    Browse rankings submitted by other visitors. Click any ranking on the left to view its detailed ordering and
+    the submitter's explanation. This page is fully functional without JavaScript; the "Randomize" button is shown
+    but will only randomize if JavaScript is enabled (optional script at bottom).
+  </p>
+
+  <div class="rankings-layout">
+
+    <!-- LEFT: list of rankings -->
+    <aside class="rankings-list" aria-label="List of recent rankings">
+      <h2>Recent submissions</h2>
+
+      <ul>
+        <li>
+          <a href="#r1" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0336.jpeg" alt="Orange thumbnail">
+            <span>Citrus Lovers</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#r2" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0346.jpeg" alt="Mango thumbnail">
+            <span>Tropical Top 10</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#r3" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0338.jpeg" alt="Apple thumbnail">
+            <span>Sweet & Simple</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#r4" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0339.jpeg" alt="Blueberry thumbnail">
+            <span>Healthy Picks</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#r5" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0348.jpeg" alt="Cherry thumbnail">
+            <span>Dessert Fruits</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#r6" class="ranking-link">
+            <img class="thumb" src="images/images/IMG_0343.jpeg" alt="Banana thumbnail">
+            <span>Surprise Mix</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="rank-controls" aria-hidden="false">
+        <a class="btn" href="#r1">First</a>
+        <a class="btn" href="#r5">Prev</a>
+        <a class="btn" href="#r2">Next</a>
+        <button type="button" class="btn ghost" id="randomize-btn" title="Requires JavaScript to randomly pick a ranking">
+          Randomize (requires JS)
+        </button>
+      </div>
+    </aside>
+
+    <!-- RIGHT: panels -->
+    <section class="rankings-panels" aria-live="polite">
+
+      <article class="rank-panel" id="r1" tabindex="-1">
+        <h3>Ranking #1 — "Citrus Lovers"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0336.jpeg" alt="Orange"><figcaption>Orange</figcaption></figure>
+          <figure><img src="images/images/IMG_0335.jpeg" alt="Lemon"><figcaption>Lemon</figcaption></figure>
+          <figure><img src="images/images/IMG_0334.jpeg" alt="Lime"><figcaption>Lime</figcaption></figure>
+          <figure><img src="images/images/IMG_0341.jpeg" alt="Grape"><figcaption>Grape</figcaption></figure>
+          <figure><img src="images/images/IMG_0343.jpeg" alt="Banana"><figcaption>Banana</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Orange — "Classic, juicy, great for snacking."</li>
+          <li>Lemon — "Great for cooking and drinks."</li>
+          <li>Lime — "Adds zip to dishes."</li>
+          <li>Grape — "Perfect for snacking and wine."</li>
+          <li>Banana — "Sweet and filling."</li>
+        </ol>
+
+        <p class="explain">Explanation: I love citrus because the flavor is bright and I use them in so many recipes. Fresh squeezed juice wins.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r6" class="small-link">Previous</a>
+          <a href="#r2" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <article class="rank-panel" id="r2" tabindex="-1">
+        <h3>Ranking #2 — "Tropical Top 10"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0346.jpeg" alt="Mango"><figcaption>Mango</figcaption></figure>
+          <figure><img src="images/images/IMG_0345.jpeg" alt="Pineapple"><figcaption>Pineapple</figcaption></figure>
+          <figure><img src="images/images/IMG_0343.jpeg" alt="Banana"><figcaption>Banana</figcaption></figure>
+          <figure><img src="images/images/IMG_0344.jpeg" alt="Coconut"><figcaption>Coconut</figcaption></figure>
+          <figure><img src="images/images/IMG_0349.jpeg" alt="Apricot"><figcaption>Apricot</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Mango</li>
+          <li>Pineapple</li>
+          <li>Papaya (not pictured)</li>
+          <li>Banana</li>
+          <li>Coconut</li>
+        </ol>
+
+        <p class="explain">Explanation: I pick tropical because of the bold, sweet flavors — perfect for smoothies and desserts.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r1" class="small-link">Previous</a>
+          <a href="#r3" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <article class="rank-panel" id="r3" tabindex="-1">
+        <h3>Ranking #3 — "Sweet & Simple"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0338.jpeg" alt="Apple"><figcaption>Apple</figcaption></figure>
+          <figure><img src="images/images/IMG_0343.jpeg" alt="Banana"><figcaption>Banana</figcaption></figure>
+          <figure><img src="images/images/IMG_0340.jpeg" alt="Strawberry"><figcaption>Strawberry</figcaption></figure>
+          <figure><img src="images/images/IMG_0339.jpeg" alt="Blueberry"><figcaption>Blueberry</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Strawberry</li>
+          <li>Blueberry</li>
+        </ol>
+
+        <p class="explain">Explanation: I prefer fruits I can eat quickly; apples and bananas are my go-to.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r2" class="small-link">Previous</a>
+          <a href="#r4" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <article class="rank-panel" id="r4" tabindex="-1">
+        <h3>Ranking #4 — "Healthy Picks"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0339.jpeg" alt="Blueberry"><figcaption>Blueberry</figcaption></figure>
+          <figure><img src="images/images/IMG_0351.jpeg" alt="Avocado"><figcaption>Avocado</figcaption></figure>
+          <figure><img src="images/images/IMG_0352.jpeg" alt="Raspberry"><figcaption>Raspberry</figcaption></figure>
+          <figure><img src="images/images/IMG_0353.jpeg" alt="Kiwi"><figcaption>Kiwi</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Blueberry</li>
+          <li>Avocado</li>
+          <li>Raspberry</li>
+          <li>Kiwi</li>
+        </ol>
+
+        <p class="explain">Explanation: I focused on nutrient density — these pack vitamins and fiber.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r3" class="small-link">Previous</a>
+          <a href="#r5" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <article class="rank-panel" id="r5" tabindex="-1">
+        <h3>Ranking #5 — "Dessert Fruits"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0348.jpeg" alt="Cherry"><figcaption>Cherry</figcaption></figure>
+          <figure><img src="images/images/IMG_0347.jpeg" alt="Peach"><figcaption>Peach</figcaption></figure>
+          <figure><img src="images/images/IMG_0350.jpeg" alt="Plum"><figcaption>Plum</figcaption></figure>
+          <figure><img src="images/images/IMG_0346.jpeg" alt="Mango"><figcaption>Mango</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Cherry</li>
+          <li>Peach</li>
+          <li>Plum</li>
+          <li>Mango</li>
+        </ol>
+
+        <p class="explain">Explanation: These fruits are my favorite in pies, cobblers, and tarts.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r4" class="small-link">Previous</a>
+          <a href="#r6" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <article class="rank-panel" id="r6" tabindex="-1">
+        <h3>Ranking #6 — "Surprise Mix"</h3>
+
+        <div class="panel-gallery">
+          <figure><img src="images/images/IMG_0351.jpeg" alt="Avocado"><figcaption>Avocado</figcaption></figure>
+          <figure><img src="images/images/IMG_0336.jpeg" alt="Orange"><figcaption>Orange</figcaption></figure>
+          <figure><img src="images/images/IMG_0340.jpeg" alt="Strawberry"><figcaption>Strawberry</figcaption></figure>
+          <figure><img src="images/images/IMG_0341.jpeg" alt="Grape"><figcaption>Grape</figcaption></figure>
+        </div>
+
+        <ol class="rank-list">
+          <li>Avocado</li>
+          <li>Orange</li>
+          <li>Strawberry</li>
+          <li>Grape</li>
+        </ol>
+
+        <p class="explain">Explanation: Random picks from what I actually keep in my kitchen.</p>
+
+        <nav class="panel-nav" aria-label="Ranking navigation">
+          <a href="#r5" class="small-link">Previous</a>
+          <a href="#r1" class="small-link">Next</a>
+        </nav>
+      </article>
+
+      <!-- default panel LAST so we can hide it when :target exists -->
+      <article class="rank-panel" id="default" tabindex="-1">
+        <h3>Pick a ranking from the left</h3>
+        <p>Select any ranking from the list on the left to see that user's full ordering and their explanation. If JavaScript is enabled you can press <strong>Randomize</strong> to jump to a random submission.</p>
+      </article>
+
+    </section>
+  </div>
+</main>
+
+<!-- OPTIONAL: uncomment to enable Randomize button behavior (purely client-side) -->
+<!--
+<script>
+  (function(){
+    const btn = document.getElementById('randomize-btn');
+    const ids = ['r1','r2','r3','r4','r5','r6'];
+    btn.addEventListener('click', function(){
+      const pick = ids[Math.floor(Math.random()*ids.length)];
+      location.hash = pick;
+    });
+  })();
+</script>
+-->
+
+</body>
+</html>
