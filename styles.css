@@ -354,6 +354,58 @@ body {
   text-decoration:underline;
 }
 
+.content-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-row {
+  display: flex;
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.question-box {
+  width: 30%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #e9e9e9;
+  border-right: 2px solid #ccc;
+}
+
+.fruit-input-section {
+  width: 70%;
+  display: flex;
+}
+
+.fruit-rank-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 75%;
+}
+
+.image-of-fruit {
+  height: 70px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+ 
+.image-of-fruit:hover {
+background-color: #fffacd;
+}
+
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .rankings-layout {
